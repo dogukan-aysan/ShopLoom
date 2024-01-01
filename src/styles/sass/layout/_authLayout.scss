@@ -1,0 +1,119 @@
+.auth-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 7% 88% 5%;
+}
+
+.auth-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(97, 0, 5, 0.603),
+      rgba(48, 0, 2, 0.603)
+    ),
+    url("../../../../img/mall.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+///////////////////////////////////////////////////
+// LOGIN FORM
+.login {
+  &__form {
+    margin: auto auto;
+    max-width: 58rem;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: var(--spacing-md);
+  }
+  &__input {
+    position: relative;
+    &--email,
+    &--password {
+      width: var(--spacing-huge);
+      padding: var(--spacing-tiny);
+      margin-top: calc(var(--spacing-tiny) * 0.3);
+      height: var(--spacing-md);
+    }
+  }
+  &__feedback {
+    position: absolute;
+  }
+  &__checkbox {
+    display: flex;
+    gap: var(--spacing-tiny);
+  }
+}
+///////////////////////////////////////////////////
+// REGISTER FORM
+.register {
+  &__form {
+    margin: auto auto;
+    max-width: 120rem;
+    height: calc(var(--spacing-huge) * 1.2);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: var(--spacing-default);
+  }
+  &__inputs {
+    display: grid;
+    grid-template-areas:
+      "first-name address"
+      "last-name password"
+      "email confirm-password";
+    grid-gap: var(--spacing-default);
+    &--first-name,
+    &--last-name,
+    &--email,
+    &--address,
+    &--password,
+    &--confirm-password {
+      position: relative;
+    }
+    &--first-name {
+      display: flex;
+      flex-direction: column;
+      grid-area: first-name;
+    }
+    &--last-name {
+      display: flex;
+      flex-direction: column;
+      grid-area: last-name;
+    }
+    &--email {
+      display: flex;
+      flex-direction: column;
+      grid-area: email;
+    }
+    &--address {
+      display: flex;
+      flex-direction: column;
+      grid-area: address;
+    }
+    &--password {
+      display: flex;
+      flex-direction: column;
+      grid-area: password;
+    }
+    &--confirm-password {
+      display: flex;
+      flex-direction: column;
+      grid-area: confirm-password;
+    }
+  }
+  &__text-field {
+    height: calc(var(--spacing-default) * 1.3);
+    width: var(--spacing-xxl);
+    padding: var(--spacing-tiny);
+  }
+  &__feedback {
+    position: absolute;
+    top: calc(var(--spacing-lg) * 0.95);
+  }
+}

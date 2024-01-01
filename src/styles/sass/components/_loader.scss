@@ -1,0 +1,21 @@
+.loader {
+  &--page-size {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    > .loader {
+      width: var(--spacing-md);
+      height: var(--spacing-md);
+    }
+  }
+  &--logout {
+    margin-right: var(--spacing-sm);
+  }
+  &--scroll {
+    > .loader {
+      width: calc(var(--spacing-sm) * 1.5);
+      height: calc(var(--spacing-sm) * 1.5);
+    }
+  }
+}

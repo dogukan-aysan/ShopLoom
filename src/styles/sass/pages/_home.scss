@@ -1,0 +1,43 @@
+////////////////////////////////////////////////
+// HOME
+.home {
+  &__hero {
+    font-weight: 400;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(97, 0, 5, 0.603),
+        rgba(48, 0, 2, 0.603)
+      ),
+      url("../../../../img/mall.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+}
+////////////////////////////////////////////////
+// HERO
+.hero {
+  &__headlines {
+    margin-bottom: var(--spacing-lg);
+    // background-image: linear-gradient(
+    //   to right,
+    //   rgba(35, 35, 35, 0.507),
+    //   rgba(59, 58, 58, 0.5)
+    // );
+  }
+  &__get-started {
+    transition: all 0.3s ease;
+    // background-image: linear-gradient(
+    //   to right,
+    //   var(--color-secondary-200),
+    //   var(--color-secondary-300)
+    // );
+    background-color: var(--color-white-500);
+    border-radius: var(--border-radius-lg);
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-3%);
+      box-shadow: var(--shadow-light);
+      filter: brightness(1.2);
+    }
+  }
+}

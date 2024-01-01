@@ -1,0 +1,85 @@
+:root {
+  // COLOR
+  --color-white: #fff;
+  --color-white-50: #fbfbfb;
+  --color-white-150: #f4f4f4;
+  --color-white-300: #e8e8e8;
+  --color-white-500: #d9d9d9;
+  --color-white-600: #aeaeae;
+
+  --color-green: #163020;
+
+  --color-primary-50: #fde5e7;
+  --color-primary-100: #fcccce;
+  --color-primary-150: #fab2b6;
+  --color-primary-200: #f9999e;
+  --color-primary-300: #f6666d;
+  --color-primary-400: #f3333d;
+  --color-primary-500: #f0000c;
+  --color-primary-600: #c0000a;
+  --color-primary-700: #900007;
+  --color-primary-800: #600005;
+  --color-primary-850: #480004;
+  --color-primary-900: #300002;
+  --color-primary-950: #180001;
+
+  --color-secondary-50: #c0bfbf;
+  --color-secondary-100: #b1b0b0;
+  --color-secondary-150: #a3a2a2;
+  --color-secondary-200: #949393;
+  --color-secondary-300: #767575;
+  --color-secondary-400: #595858;
+  --color-secondary-500: #3b3a3a;
+  --color-secondary-600: #2f2e2e;
+  --color-secondary-700: #232323;
+  --color-secondary-800: #181717;
+  --color-secondary-850: #121111;
+  --color-secondary-900: #0c0c0c;
+  --color-secondary-950: #060606;
+
+  --color-black: #000;
+
+  --color-white-1: #fff;
+  --color-white-2: rgb(254, 254, 254);
+
+  // SPACING
+  --spacing-tiny: 1rem;
+  --spacing-sm: 2rem;
+  --spacing-default: 3.5rem;
+  --spacing-md: 5rem;
+  --spacing-lg: 13rem;
+  --spacing-extra: 20rem;
+  --spacing-xxl: 35rem;
+  --spacing-huge: 45rem;
+
+  // SHADOW
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  // BREAKPOINTS
+  --bg-max: 142rem;
+  --bp-xxl: 120rem;
+  --bp-lg: 110rem;
+  --bp-md: 90rem;
+  --bp-sm: 60rem;
+  --bp-xsm: 50rem;
+
+  // BORDER RADIUS
+  --border-radius-tiny: 3px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 7px;
+  --border-radius-lg: 10rem;
+
+  // FONT SIZE
+  --font-size-tiny: 1.3rem;
+  --font-size-sm: 1.5rem;
+  --font-size-default: 1.7rem;
+  --font-size-md: 3rem;
+  --font-size-lg: 4rem;
+  --font-size-xxl: 5rem;
+
+  // LETTER SPACING
+  --letter-spacing-sm: 0.1rem;
+  --letter-spacing-md: 0.3rem;
+  --letter-spacing-lg: 0.5rem;
+}

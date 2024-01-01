@@ -1,0 +1,262 @@
+///////////////////////////////
+// HEADER
+.header {
+  &__company-overview {
+    &--about,
+    &--contact {
+      @media only screen and (max-width: 645px) {
+        display: none;
+      }
+    }
+  }
+  &__auth {
+    @media only screen and (max-width: 645px) {
+      display: none;
+    }
+    &--register {
+      @media only screen and (max-width: 645px) {
+        padding: 0;
+        background-color: var(--color-primary-800) !important;
+        color: var(--color-primary-100) !important;
+      }
+    }
+  }
+  &__hamburger {
+    @media only screen and (max-width: 645px) {
+      display: block;
+    }
+  }
+  &__hidden-links {
+    list-style-type: none;
+    position: absolute;
+    top: calc(var(--spacing-default) * 1.8);
+    background-color: var(--color-primary-800);
+    width: 100%;
+    padding: var(--spacing-tiny) 0 var(--spacing-tiny) var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-tiny) * 0.7);
+    font-size: var(--font-size-sm);
+    z-index: 2;
+    @media only screen and (min-width: 645px) {
+      display: none;
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: var(--font-size-tiny);
+    }
+  }
+}
+.hidden-links {
+  &--about,
+  &--contact {
+    color: var(--color-primary-100);
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+  &--auth {
+    display: flex;
+    flex-direction: column;
+    width: var(--spacing-lg);
+    gap: calc(var(--spacing-tiny) * 0.7);
+  }
+}
+.button--logout {
+  @media only screen and (max-width: 645px) {
+    padding: 0;
+    background-color: var(--color-primary-800) !important;
+    color: var(--color-primary-100) !important;
+    text-align: left;
+  }
+}
+///////////////////////////////
+// HERO
+.hero {
+  &__headlines {
+    &--main {
+      @media only screen and (max-width: 1420px) {
+        font-size: var(--font-size-xxl);
+      }
+      @media only screen and (max-width: 1140px) {
+        font-size: var(--font-size-lg);
+      }
+      @media only screen and (max-width: 965px) {
+        font-size: calc(var(--font-size-md) * 1.05);
+      }
+      @media only screen and (max-width: 645px) {
+        font-size: calc(var(--font-size-default) * 1.5);
+      }
+    }
+    &--secondary {
+      @media only screen and (max-width: 1140px) {
+        font-size: calc(var(--font-size-default) * 0.8);
+      }
+      @media only screen and (max-width: 645px) {
+        font-size: var(--font-size-tiny);
+      }
+      @media only screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+  }
+  &__get-started {
+    @media only screen and (max-width: 1140px) {
+      font-size: calc(var(--font-size-md) * 0.56);
+      padding: calc(var(--spacing-tiny) * 1.3);
+      margin-top: -80px;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-top: -90px;
+    }
+  }
+}
+///////////////////////////////
+// LOGIN FORM
+.login {
+  &__heading {
+    @media only screen and (max-width: 480px) {
+      font-size: var(--font-size-sm);
+    }
+  }
+  &__form {
+    @media only screen and (max-width: 645px) {
+      max-width: 53rem;
+      padding: calc(var(--spacing-md) * 0.7);
+      gap: calc(var(--spacing-md) * 0.7);
+    }
+    @media only screen and (max-width: 480px) {
+      width: 33rem;
+      padding: calc(var(--spacing-default) * 0.8);
+      gap: calc(var(--spacing-default) * 0.8);
+    }
+  }
+  &__input {
+    &--email,
+    &--password {
+      @media only screen and (max-width: 645px) {
+        width: calc(var(--spacing-huge) * 0.8);
+        height: calc(var(--spacing-default) * 1.1);
+      }
+      @media only screen and (max-width: 480px) {
+        width: calc(var(--spacing-huge) * 0.6);
+        height: var(--spacing-default);
+      }
+    }
+  }
+}
+.button--login {
+  @media only screen and (max-width: 645px) {
+    padding: calc(var(--spacing-tiny) * 0.6);
+  }
+}
+///////////////////////////////
+// REGISTER FORM
+.register {
+  &__heading {
+    @media only screen and (max-width: 645px) {
+      font-size: var(--font-size-sm);
+    }
+  }
+  &__form {
+    @media only screen and (max-width: 965px) {
+      padding: calc(var(--spacing-md) * 0.6);
+      gap: calc(var(--spacing-sm) * 0.5);
+    }
+    @media only screen and (max-width: 645px) {
+      padding: calc(var(--spacing-sm) * 1.3);
+      height: calc(var(--spacing-huge) * 1.3);
+      gap: 0;
+      margin-bottom: var(--spacing-md);
+    }
+    @media only screen and (max-width: 480px) {
+      height: calc(var(--spacing-huge) * 1.33);
+      width: var(--spacing-xxl);
+    }
+  }
+  &__inputs {
+    @media only screen and (max-width: 645px) {
+      grid-template-areas:
+        "first-name"
+        "last-name"
+        "address"
+        "email"
+        "password"
+        "confirm-password";
+      grid-gap: var(--spacing-tiny);
+    }
+  }
+  &__text-field {
+    @media only screen and (max-width: 965px) {
+      width: calc(var(--spacing-xxl) * 0.7);
+      height: calc(var(--spacing-default) * 1.15);
+    }
+    @media only screen and (max-width: 645px) {
+      width: calc(var(--spacing-xxl) * 1);
+      height: calc(var(--spacing-sm) * 1.6);
+    }
+    @media only screen and (max-width: 480px) {
+      width: calc(var(--spacing-extra) * 1.5);
+      height: calc(var(--spacing-sm) * 1.5);
+    }
+  }
+  &__label,
+  &__feedback {
+    @media only screen and (max-width: 965px) {
+      font-size: calc(var(--font-size-tiny) * 0.9);
+    }
+  }
+}
+.button--register {
+  @media only screen and (max-width: 645px) {
+    padding: calc(var(--spacing-tiny) * 0.6);
+  }
+}
+///////////////////////////////
+// CATALOGUE
+.catalogue {
+  @media only screen and (max-width: 1580px) {
+    width: 109rem;
+  }
+  @media only screen and (max-width: 1240px) {
+    width: 75rem;
+  }
+  @media only screen and (max-width: 850px) {
+    width: 35rem;
+  }
+  &__header {
+    @media only screen and (max-width: 850px) {
+      font-size: var(--font-size-tiny);
+      gap: var(--spacing-tiny);
+    }
+  }
+  &__total-results {
+    @media only screen and (max-width: 850px) {
+      margin-left: 0;
+    }
+  }
+  &__grid {
+    @media only screen and (max-width: 1580px) {
+      grid-template-columns: repeat(3, 35rem);
+    }
+    @media only screen and (max-width: 1240px) {
+      grid-template-columns: repeat(2, 35rem);
+      column-gap: var(--spacing-md);
+    }
+    @media only screen and (max-width: 850px) {
+      grid-template-columns: 35rem;
+      column-gap: var(--spacing-md);
+    }
+  }
+}
+
+.search-box {
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+  }
+  &__input {
+    @media only screen and (max-width: 850px) {
+      font-size: var(--font-size-tiny);
+    }
+  }
+}

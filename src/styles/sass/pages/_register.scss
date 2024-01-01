@@ -1,0 +1,12 @@
+.register {
+  &__form {
+    background-color: var(--color-primary-900);
+    border-radius: 3rem;
+    box-shadow: var(--shadow-dark);
+  }
+  &__text-field {
+    background-color: var(--color-white-500);
+    border: none;
+    border-radius: var(--border-radius-tiny);
+  }
+}

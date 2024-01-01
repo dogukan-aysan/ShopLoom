@@ -1,0 +1,37 @@
+.button {
+  padding: var(--spacing-tiny) var(--spacing-sm);
+  border: none;
+  &--login,
+  &--register,
+  &--logout,
+  &--add-cart {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+  &--login,
+  &--register,
+  &--loader {
+    border-radius: var(--border-radius-lg);
+    margin-top: var(--spacing-tiny);
+  }
+  &--login,
+  &--register {
+    background-color: var(--color-primary-800);
+  }
+  &--logout {
+    background-color: var(--color-primary-900);
+  }
+  &--add-cart {
+    background-color: var(--color-primary-800);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-tiny);
+  }
+  &--loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-tiny);
+  }
+}

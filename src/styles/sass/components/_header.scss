@@ -1,0 +1,54 @@
+.header {
+  padding: 0 var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-900);
+  &__company-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    &--about,
+    &--contact {
+      color: var(--color-primary-100);
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    &--login,
+    &--register {
+      text-decoration: none;
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+    &--login {
+      color: var(--color-primary-100);
+    }
+    &--register {
+      color: var(--color-white);
+      background-color: var(--color-primary-700);
+      border-radius: var(--border-radius-lg);
+      padding: calc(var(--spacing-tiny) * 0.5) var(--spacing-sm);
+    }
+  }
+  &__hamburger {
+    display: none;
+    height: var(--spacing-md);
+    width: var(--spacing-default);
+    fill: var(--color-primary-950);
+    &:hover {
+      cursor: pointer;
+      fill: var(--color-primary-50);
+    }
+  }
+}

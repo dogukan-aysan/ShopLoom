@@ -1,0 +1,8 @@
+.logo {
+  fill: var(--color-primary-500);
+  height: 6rem;
+  width: 6rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
