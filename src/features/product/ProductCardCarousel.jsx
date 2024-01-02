@@ -1,6 +1,5 @@
 function ProductCardCarousel({ images, id }) {
-  const jsonString = images.replace(/'/g, '"');
-  const imagesArr = JSON.parse(jsonString);
+  const imagesArr = JSON.parse(images);
   return (
     <div id={id} className="carousel slide">
       <div className="carousel-inner">

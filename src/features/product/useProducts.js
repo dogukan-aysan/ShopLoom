@@ -34,7 +34,4 @@ function useProducts() {
     hasNextPage,
   };
 }
-
 export default useProducts;
-
-// all the react query logic in its own hooks
