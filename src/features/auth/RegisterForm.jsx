@@ -107,7 +107,10 @@ function RegisterForm() {
           </div>
           {/* PASSWORD */}
           <div className="register__inputs--password">
-            <label className="register__label form-label" htmlFor="password">
+            <label
+              className="register__label form-label register__label--pasword"
+              htmlFor="password"
+            >
               Password (min 8 characters):
             </label>
             <input

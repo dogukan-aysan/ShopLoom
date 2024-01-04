@@ -79,13 +79,14 @@ body {
     font-size: inherit;
   }
   &__heading {
+    font-size: var(--font-size-default);
     text-transform: uppercase;
   }
   &__label {
     font-size: var(--font-size-tiny);
   }
   &__feedback {
-    font-size: var(--font-size-tiny);
+    font-size: calc(var(--font-size-tiny) * 0.7);
   }
 }
 ////////////////////////////////////////////////
