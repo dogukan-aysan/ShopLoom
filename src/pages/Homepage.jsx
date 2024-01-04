@@ -5,9 +5,13 @@ import Hero from "../ui/Hero";
 function Homepage() {
   return (
     <div className="home">
-      <Header />
+      <div className="home__header">
+        <Header />
+      </div>
       <Hero />
-      <Footer />
+      <div className="home__footer">
+        <Footer />
+      </div>
     </div>
   );
 }

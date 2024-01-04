@@ -1,9 +1,8 @@
 function ProductCardCarousel({ images, id }) {
-  const imagesArr = JSON.parse(images);
   return (
     <div id={id} className="carousel slide">
       <div className="carousel-inner">
-        {imagesArr.map((image, index) => {
+        {images?.map((image, index) => {
           return (
             <div
               key={index}

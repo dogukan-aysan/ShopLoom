@@ -1,7 +1,13 @@
 .app-layout {
   height: 100vh;
   display: grid;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 7% 88% 5%;
+  &__header,
+  &__footer {
+    grid-column: 1 / span 2;
+    padding: 0;
+  }
 }
 //////////////////////////////////////////
 // MAIN CONTAINER OF CHILDREN

@@ -1,11 +1,12 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { getProducts } from "../../service/apiProducts";
 import { useContext } from "react";
-import { ProductContext } from "../../contexts/ProductContext";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { useInView } from "react-intersection-observer";
+import { ProductContext } from "../../contexts/ProductContext";
+import { getProducts } from "../../service/apiProducts";
 
 function useProducts() {
-  const { selectedSortBy, searchPattern } = useContext(ProductContext);
+  const { selectedSortBy, searchPattern, selectedCategory } =
+    useContext(ProductContext);
   const { ref, inView } = useInView();
   const {
     data: { pages } = {},
@@ -15,12 +16,22 @@ function useProducts() {
     isFetchingNextPage,
     hasNextPage,
   } = useInfiniteQuery({
-    queryKey: ["products", selectedSortBy, searchPattern],
+    queryKey: [selectedSortBy, searchPattern, selectedCategory],
     queryFn: getProducts,
-    initialPageParam: { nextChunk: 1, selectedSortBy, searchPattern },
+    initialPageParam: {
+      nextChunk: 1,
+      selectedSortBy,
+      searchPattern,
+      selectedCategory,
+    },
     getNextPageParam: (lastPage, allPages) => {
       const nextChunk = lastPage.data.length ? allPages.length + 1 : undefined;
-      return { nextChunk, selectedSortBy, searchPattern };
+      return {
+        nextChunk,
+        selectedSortBy,
+        searchPattern,
+        selectedCategory,
+      };
     },
   });
   return {
@@ -34,4 +45,5 @@ function useProducts() {
     hasNextPage,
   };
 }
+
 export default useProducts;

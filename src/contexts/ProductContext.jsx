@@ -3,10 +3,22 @@ import { createContext, useReducer } from "react";
 const initialState = {
   sortByOptions: ["Trending", "Price (low first)", "Price (high first)"],
   selectedSortBy: "Trending",
-  selectedCategory: null,
   searchPattern: "",
   productCount: null,
-  categories: [],
+  selectedCategory: "All",
+  categories: [
+    "All",
+    "Bag",
+    "Blazer",
+    "Dressy Jumpsuit",
+    "Jacket",
+    "Knitwear",
+    "Loungewear",
+    "Shirt",
+    "Shoe",
+    "Waistcoat & Gilet",
+    "Workwear",
+  ],
 };
 
 const reducer = (state, action) => {
@@ -18,16 +30,16 @@ const reducer = (state, action) => {
     case "reset":
       return {
         ...state,
-        selectedCategory: "",
         searchPattern: "",
         selectedSortBy: "Trending",
       };
     case "count":
       return { ...state, productCount: action.payload };
     case "category/selected":
-      return null;
-    case "category/added":
-      return null;
+      return {
+        ...state,
+        selectedCategory: action.payload,
+      };
   }
 };
 
@@ -38,10 +50,10 @@ const ProductProvider = ({ children }) => {
     {
       sortByOptions,
       selectedSortBy,
-      categories,
-      selectedCategory,
       searchPattern,
       productCount,
+      selectedCategory,
+      categories,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -50,10 +62,10 @@ const ProductProvider = ({ children }) => {
       value={{
         sortByOptions,
         selectedSortBy,
-        categories,
-        selectedCategory,
         searchPattern,
         productCount,
+        selectedCategory,
+        categories,
         dispatch,
       }}
     >

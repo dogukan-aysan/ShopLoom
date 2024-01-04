@@ -213,37 +213,47 @@
   }
 }
 ///////////////////////////////
+// APP LAYOUT
+.app-layout {
+  @media only screen and (max-width: 645px) {
+    grid-template-columns: 1fr;
+    &__aside {
+      display: none;
+    }
+  }
+}
+///////////////////////////////
 // CATALOGUE
 .catalogue {
-  @media only screen and (max-width: 1580px) {
+  @media only screen and (max-width: 1770px) {
     width: 109rem;
   }
-  @media only screen and (max-width: 1240px) {
+  @media only screen and (max-width: 1440px) {
     width: 75rem;
   }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1100px) {
     width: 35rem;
   }
   &__header {
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1100px) {
       font-size: var(--font-size-tiny);
       gap: var(--spacing-tiny);
     }
   }
   &__total-results {
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1100px) {
       margin-left: 0;
     }
   }
   &__grid {
-    @media only screen and (max-width: 1580px) {
+    @media only screen and (max-width: 1770px) {
       grid-template-columns: repeat(3, 35rem);
     }
-    @media only screen and (max-width: 1240px) {
+    @media only screen and (max-width: 1440px) {
       grid-template-columns: repeat(2, 35rem);
       column-gap: var(--spacing-md);
     }
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1100px) {
       grid-template-columns: 35rem;
       column-gap: var(--spacing-md);
     }
@@ -251,11 +261,11 @@
 }
 
 .search-box {
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 1100px) {
     width: 100%;
   }
   &__input {
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1100px) {
       font-size: var(--font-size-tiny);
     }
   }

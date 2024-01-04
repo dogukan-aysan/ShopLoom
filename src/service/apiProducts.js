@@ -2,26 +2,24 @@ import supabase from "./supabase";
 import { CHUNK_SIZE } from "../utils/constants";
 
 export async function getProducts({
-  pageParam: { nextChunk, searchPattern, selectedSortBy },
+  pageParam: { nextChunk, selectedSortBy, searchPattern, selectedCategory },
 }) {
   const from = nextChunk === 1 ? 0 : (nextChunk - 1) * CHUNK_SIZE + 1;
   const to = from + CHUNK_SIZE + 1;
   let query = supabase
-    .from("products")
-    .select(
-      "uniq_id, description, product_name, product_category_tree, discounted_price, image",
-      { count: "exact" }
-    )
+    .from(selectedCategory)
+    .select("id, Product_Name, Price, Details, Product_Image", {
+      count: "exact",
+    })
     .range(from, to);
 
   // FILTER
-  query = query.gt("discounted_price", 0);
+  query = query.neq("Product_Image", null);
+  if (searchPattern) query = query.ilike("Product_Name", `%${searchPattern}%`);
 
-  if (searchPattern) query = query.ilike("product_name", `%${searchPattern}%`);
-
-  // // // SORT;
+  // SORT;
   if (selectedSortBy && selectedSortBy !== "Trending")
-    query = query.order("discounted_price", {
+    query = query.order("Price", {
       ascending: selectedSortBy.includes("low"),
     });
 
