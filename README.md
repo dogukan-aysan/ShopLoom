@@ -23,12 +23,12 @@ This application is not intended for real-world use; rather, it serves as a spac
 
 ## Tech Stack
 
-**Front-end:** React
-**Routing:** React Router
-**Styling:** SASS, Bootstrap
-**Data Storage:** Supabase
-**Global State Management:** Context API + useReducer
-**Remote State Management:** React Query
+**Front-end:** React<br/>
+**Routing:** React Router<br/>
+**Styling:** SASS, Bootstrap<br/>
+**Data Storage:** Supabase<br/>
+**Global State Management:** Context API + useReducer<br/>
+**Remote State Management:** React Query<br/>
 **Form Management:** React Hook Form
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
