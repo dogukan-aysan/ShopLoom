@@ -15,3 +15,7 @@ body {
   height: 100vh;
   background-color: var(--color-grey-light-2);
 }
+
+.hidden {
+  display: none !important;
+}

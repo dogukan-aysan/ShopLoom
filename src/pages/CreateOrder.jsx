@@ -1,5 +1,12 @@
+import BackButton from "../ui/buttons/BackButton";
+
 function CreateOrder() {
-  return <>CREATE ORDER</>;
+  return (
+    <>
+      CREATE ORDER
+      <BackButton />
+    </>
+  );
 }
 
 export default CreateOrder;

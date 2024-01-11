@@ -1,37 +1,81 @@
-import { createContext, useContext, useReducer } from "react";
-
-const CartContext = createContext();
+import { createContext, useReducer } from "react";
 
 const initialState = {
   cart: [],
+  price: 0,
+  productCount: 0,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "user/authenticated":
-      return { ...state, userName: action.payload, isAuthenticated: true };
-    case "user/logout":
-      return { ...state, userName: "", isAuthenticated: false };
-    case "cart/loaded":
-      return { ...state, cart: (oldCart) => oldCart.push(action.payload) };
+    case "cart/update":
+      return {
+        ...state,
+        cart: action.payload,
+        productCount:
+          action.payload.length === 0
+            ? 0
+            : state.cart.reduce((acc, curr) => (acc = acc + curr.amount), 0),
+        price:
+          action.payload.length === 0
+            ? 0
+            : state.cart.reduce(
+                (acc, curr) => (acc = acc + curr.amount * curr.price),
+                0
+              ),
+      };
+    case "cart/clear":
+      return { ...state, cart: [], price: 0, productCount: 0 };
     default:
       return null;
   }
 };
 
+const CartContext = createContext();
+
 const CartProvider = ({ children }) => {
-  const [{ cart }, dispatch] = useReducer(reducer, initialState);
+  const [{ cart, price, productCount }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
+  const addProductToCart = (product) => {
+    let isExisted = false;
+    for (let p of cart) {
+      if (p.id === product.id) {
+        p.amount++;
+        isExisted = true;
+      }
+    }
+    if (!isExisted) cart.push(product);
+    dispatch({ type: "cart/update", payload: cart });
+  };
+  const deleteProductFromCart = (id) => {
+    const filteredCart = cart.filter((product) => {
+      if (product.id === id) {
+        if (product.amount === 1) {
+          return false;
+        } else {
+          product.amount--;
+        }
+      }
+      return true;
+    });
+    dispatch({ type: "cart/update", payload: filteredCart });
+  };
   return (
-    <CartContext.Provider value={(cart, dispatch)}>
+    <CartContext.Provider
+      value={{
+        cart,
+        dispatch,
+        price,
+        productCount,
+        addProductToCart,
+        deleteProductFromCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
 
-function useCart() {
-  const context = useContext(CartContext);
-  if (!context) throw new Error("💥Context was used outside of the Provider💥");
-  return context;
-}
-
-export { CartProvider, useCart };
+export { CartProvider, CartContext };

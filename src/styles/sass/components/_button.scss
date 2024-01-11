@@ -4,6 +4,8 @@
   &--login,
   &--register,
   &--logout,
+  &--clear,
+  &--order,
   &--add-cart {
     &:hover {
       cursor: pointer;
@@ -12,13 +14,19 @@
   }
   &--login,
   &--register,
-  &--loader {
+  &--loader,
+  &--clear,
+  &--order {
     border-radius: var(--border-radius-lg);
     margin-top: var(--spacing-tiny);
   }
   &--login,
-  &--register {
+  &--register,
+  &--clear {
     background-color: var(--color-primary-800);
+  }
+  &--order {
+    background-color: var(--color-green);
   }
   &--logout {
     background-color: var(--color-primary-900);

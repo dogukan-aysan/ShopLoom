@@ -112,6 +112,10 @@ body {
   }
   &--add-cart {
     font-size: var(--font-size-tiny);
-    color: var(--color-white-1);
+    color: var(--color-white);
+  }
+  &--clear,
+  &--order {
+    color: var(--color-white-500);
   }
 }

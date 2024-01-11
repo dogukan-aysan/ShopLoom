@@ -1,0 +1,118 @@
+.shopping-cart {
+  margin-left: auto;
+  margin-bottom: auto;
+  position: relative;
+  &__icon {
+    font-size: var(--font-size-md);
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+  &__notification {
+    position: absolute;
+    top: var(--spacing-tiny);
+    left: -0.7rem;
+    font-size: var(--font-size-tiny);
+    font-weight: 400;
+    background-color: var(--color-primary-400);
+    height: calc(var(--spacing-sm) * 0.95);
+    width: calc(var(--spacing-sm) * 0.95);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__overview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 70%;
+    max-height: 90%;
+    overflow: scroll;
+    width: 50%;
+    padding: var(--spacing-md);
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-950);
+    font-weight: 700;
+    border-radius: var(--border-radius-sm);
+  }
+  &__empty-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(var(--spacing-huge) * 1.5);
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-default);
+    text-align: center;
+  }
+  &__back-button {
+    display: inline-flex;
+    gap: var(--spacing-tiny);
+    background-color: var(--color-primary-100);
+    padding: var(--spacing-tiny) var(--spacing-tiny);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:hover {
+      cursor: pointer;
+      background: darken(#f0000c, 20%);
+    }
+  }
+  &__heading {
+    font: inherit;
+    font-size: var(--font-size-md);
+  }
+  &__table {
+    margin-top: var(--spacing-sm);
+    width: 100%;
+  }
+  &__table-header {
+    // background-color: var(--color-primary-50);
+    font-size: var(--font-size-tiny);
+    font-weight: 400;
+  }
+  &__header-row {
+    height: var(--spacing-default);
+  }
+  &__header-cell {
+    padding: var(--spacing-tiny) 0;
+  }
+  &__table-body {
+    font-size: var(--font-size-sm);
+  }
+  &__trash {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__divider {
+    height: calc(var(--spacing-tiny) * 0.1);
+    width: 95%;
+    background-color: black;
+    margin: var(--spacing-sm) 0;
+  }
+  &__total-price {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+  &__price-field {
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    align-self: flex-end;
+  }
+  &__buttons {
+    margin-top: var(--spacing-default);
+    margin-left: auto;
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+}

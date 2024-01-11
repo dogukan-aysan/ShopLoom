@@ -25,6 +25,6 @@ dist-ssr
 
 # My Additons
 package-lock.json
-myNotes
+projectNotes.md
 config.js
 src/styles/css/style.css.map

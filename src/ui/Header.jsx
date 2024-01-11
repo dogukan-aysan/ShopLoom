@@ -1,11 +1,17 @@
-import Logo from "./Logo";
-import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
+import { Squash as Hamburger } from "hamburger-react";
 import HeaderAuth from "./HeaderAuth";
 import HiddenLinks from "./HiddenLinks";
+import Logo from "./Logo";
+import ShoppingCartIcon from "../features/shoppingCart/ShoppingCartIcon";
+import useUser from "../features/auth/useUser";
+import { useLocation } from "react-router-dom";
 
 function Header() {
+  const { isAuthenticated } = useUser();
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
   return (
     <>
       <header className="header">
@@ -14,6 +20,9 @@ function Header() {
           <span className="header__company-overview--about">About</span>
           <span className="header__company-overview--contact">Contact</span>
         </div>
+        {isAuthenticated && location.pathname !== "/app/shopping-cart" && (
+          <ShoppingCartIcon />
+        )}
         <div className="header__auth">
           <HeaderAuth />
         </div>

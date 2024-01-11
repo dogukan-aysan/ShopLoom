@@ -3,8 +3,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 
-import { CartProvider } from "./contexts/CartContext";
-
 import ProtectedRoute from "./ui/ProtectedRoute";
 import AppLayout from "./ui/AppLayout";
 import AuthLayout from "./ui/AuthLayout";
@@ -20,8 +18,10 @@ import Homepage from "./pages/Homepage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
-import "./styles/css/style.css";
+import { CartProvider } from "./contexts/CartContext";
 import { ProductProvider } from "./contexts/ProductContext";
+
+import "./styles/css/style.css";
 
 // sets up cache behind the scenes
 const queryClient = new QueryClient({
