@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+// import { useNavigate } from "react-router-dom";
 
 function OrderButton() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const onOrderClick = () => {
-    navigate("/app/order/new");
+    // navigate("/app/order/new");
+    toast.error("Not yet implemented");
   };
   return (
     <button className="button button--order" onClick={onOrderClick}>

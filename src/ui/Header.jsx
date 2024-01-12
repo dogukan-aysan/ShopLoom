@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import ShoppingCartIcon from "../features/shoppingCart/ShoppingCartIcon";
 import useUser from "../features/auth/useUser";
 import { useLocation } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function Header() {
   const { isAuthenticated } = useUser();
@@ -17,8 +18,18 @@ function Header() {
       <header className="header">
         <div className="header__company-overview">
           <Logo />
-          <span className="header__company-overview--about">About</span>
-          <span className="header__company-overview--contact">Contact</span>
+          <span
+            className="header__company-overview--about"
+            onClick={() => toast.error("Not yet implemented")}
+          >
+            About
+          </span>
+          <span
+            className="header__company-overview--contact"
+            onClick={() => toast.error("Not yet implemented")}
+          >
+            Contact
+          </span>
         </div>
         {isAuthenticated && location.pathname !== "/app/shopping-cart" && (
           <ShoppingCartIcon />
