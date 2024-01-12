@@ -1,0 +1,27 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-tiny);
+  font-size: calc(var(--font-size-tiny) * 0.8);
+  margin-top: var(--spacing-sm);
+  &__item {
+    padding: calc(var(--spacing-tiny) * 0.4);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-white-500);
+    border: 0.1rem solid var(--color-white-500);
+
+    &:hover {
+      cursor: pointer;
+      background: darken(#f0000c, 20%);
+      color: var(--color-white-150);
+    }
+    &--active {
+      background: darken(#f0000c, 20%);
+      color: var(--color-white-150);
+      &:hover {
+        cursor: no-drop;
+      }
+    }
+  }
+}

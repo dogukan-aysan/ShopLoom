@@ -19,25 +19,3 @@
     font-weight: 700;
   }
 }
-
-.categories {
-  &__item {
-    padding: calc(var(--spacing-tiny) * 0.4);
-    background-color: var(--color-primary-50);
-    border-radius: var(--border-radius-sm);
-    color: var(--color-primary-950);
-
-    &:hover {
-      cursor: pointer;
-      background: darken(#f0000c, 20%);
-      color: var(--color-white-150);
-    }
-    &--active {
-      background: darken(#f0000c, 20%);
-      color: var(--color-white-150);
-      &:hover {
-        cursor: no-drop;
-      }
-    }
-  }
-}

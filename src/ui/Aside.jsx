@@ -10,7 +10,9 @@ function Aside() {
       }`}
     >
       <h2 className="aside__heading">Categories</h2>
-      <Categories />
+      <div className="aside__categories">
+        <Categories />
+      </div>
     </div>
   );
 }

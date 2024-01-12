@@ -8,7 +8,7 @@ function Categories() {
       dispatch({ type: "category/selected", payload: cat });
   };
   return (
-    <div className="aside__categories">
+    <div className="categories">
       {categories?.map((category, index) => (
         <span
           className={`categories__item${

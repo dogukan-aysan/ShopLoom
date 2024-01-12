@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import SearchBox from "./SearchBox";
 import { ProductContext } from "../../contexts/ProductContext";
+import SearchBox from "./SearchBox";
+import Categories from "./Categories";
 
 function GridHeader() {
   const { productCount } = useContext(ProductContext);
@@ -10,6 +11,9 @@ function GridHeader() {
       <span className="catalogue__total-results">
         Total results: {productCount}
       </span>
+      <div className="catalogue__categories">
+        <Categories />
+      </div>
     </div>
   );
 }
