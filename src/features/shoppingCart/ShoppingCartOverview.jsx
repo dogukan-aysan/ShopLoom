@@ -26,7 +26,7 @@ function ShoppingCartOverview() {
         <>
           {cart.length === 0 ? (
             <span className="shopping-cart__empty-message">
-              Your cart is empty. Lets go back to shopping
+              Your cart is empty. Let&apos;s go back to shopping
             </span>
           ) : (
             <>

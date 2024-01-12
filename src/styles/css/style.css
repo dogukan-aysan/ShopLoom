@@ -33,8 +33,6 @@
   --color-secondary-900: #0c0c0c;
   --color-secondary-950: #060606;
   --color-black: #000;
-  --color-white-1: #fff;
-  --color-white-2: rgb(254, 254, 254);
   --spacing-tiny: 1rem;
   --spacing-sm: 2rem;
   --spacing-default: 3.5rem;
@@ -55,6 +53,7 @@
   --border-radius-sm: 5px;
   --border-radius-md: 7px;
   --border-radius-lg: 10rem;
+  --border-radius-huge: 100rem;
   --font-size-tiny: 1.3rem;
   --font-size-sm: 1.5rem;
   --font-size-default: 1.7rem;
@@ -370,9 +369,9 @@ body {
   overflow: scroll;
   width: 50%;
   padding: var(--spacing-md);
-  background-color: var(--color-primary-100);
-  color: var(--color-primary-950);
-  font-weight: 700;
+  background-color: var(--color-primary-900);
+  color: var(--color-white-500);
+  font-weight: 400;
   border-radius: var(--border-radius-sm);
 }
 .shopping-cart__empty-message {
@@ -387,7 +386,6 @@ body {
 .shopping-cart__back-button {
   display: inline-flex;
   gap: var(--spacing-tiny);
-  background-color: var(--color-primary-100);
   padding: var(--spacing-tiny) var(--spacing-tiny);
   border-radius: var(--border-radius-sm);
   font-size: var(--font-size-sm);
@@ -408,6 +406,8 @@ body {
   width: 100%;
 }
 .shopping-cart__table-header {
+  color: var(--color-secondary-150);
+  text-decoration: underline;
   font-size: var(--font-size-tiny);
   font-weight: 400;
 }
@@ -419,14 +419,22 @@ body {
 }
 .shopping-cart__table-body {
   font-size: var(--font-size-sm);
+  font-style: italic;
+}
+.shopping-cart__trash {
+  cursor: pointer;
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: var(--border-radius-huge);
 }
 .shopping-cart__trash:hover {
-  cursor: pointer;
+  background-color: var(--color-secondary-400);
 }
 .shopping-cart__divider {
   height: calc(var(--spacing-tiny) * 0.1);
   width: 95%;
-  background-color: black;
+  background-color: var(--color-white-500);
   margin: var(--spacing-sm) 0;
 }
 .shopping-cart__total-price {
@@ -437,6 +445,7 @@ body {
   font-size: var(--font-size-sm);
   font-weight: 400;
   align-self: flex-end;
+  color: var(--color-secondary-150);
 }
 .shopping-cart__buttons {
   margin-top: var(--spacing-default);
