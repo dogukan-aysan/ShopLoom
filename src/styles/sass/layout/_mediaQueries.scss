@@ -76,7 +76,7 @@
 .hero {
   &__headlines {
     &--main {
-      @media only screen and (max-width: 1420px) {
+      @media only screen and (max-width: 1440px) {
         font-size: var(--font-size-xxl);
       }
       @media only screen and (max-width: 1140px) {
@@ -277,5 +277,64 @@
 .shopping-cart {
   @media only screen and (max-width: 645px) {
     display: none;
+  }
+  &__overview {
+    @media only screen and (max-width: 1770px) {
+      width: 70%;
+    }
+    @media only screen and (max-width: 1300px) {
+      width: 85%;
+    }
+    @media only screen and (max-width: 800px) {
+      width: 95%;
+    }
+  }
+  &__empty-message {
+    @media only screen and (max-width: 645px) {
+      width: var(--spacing-extra);
+    }
+  }
+  &__table-header {
+    @media only screen and (max-width: 965px) {
+      font-size: calc(var(--font-size-tiny) * 0.8);
+    }
+  }
+  &__table-body {
+    @media only screen and (max-width: 965px) {
+      font-size: var(--font-size-tiny);
+    }
+  }
+  &__header-cell {
+    &:last-child {
+      @media only screen and (max-width: 800px) {
+        padding-left: var(--spacing-sm);
+      }
+    }
+  }
+  &__body-cell {
+    @media only screen and (max-width: 800px) {
+      padding: var(--spacing-tiny) 0;
+    }
+    &:first-child {
+      @media only screen and (max-width: 800px) {
+        padding-right: var(--spacing-sm);
+      }
+    }
+  }
+  &__divider {
+    @media only screen and (max-width: 645px) {
+      margin-top: var(--spacing-tiny) 0;
+    }
+  }
+  &__total-price {
+    @media only screen and (max-width: 645px) {
+      font-size: var(--font-size-sm);
+    }
+  }
+  &__buttons {
+    @media only screen and (max-width: 645px) {
+      margin-top: var(--spacing-sm);
+      font-size: var(--font-size-tiny);
+    }
   }
 }

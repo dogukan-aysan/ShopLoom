@@ -33,10 +33,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 70%;
     max-height: 90%;
-    overflow: scroll;
     width: 50%;
+    height: fit-content;
     padding: var(--spacing-md);
     background-color: var(--color-primary-900);
     color: var(--color-white-500);
@@ -117,8 +116,7 @@
     color: var(--color-secondary-150);
   }
   &__buttons {
-    margin-top: var(--spacing-default);
-    margin-left: auto;
+    margin: var(--spacing-default) 0 0 auto;
     display: flex;
     gap: var(--spacing-sm);
   }

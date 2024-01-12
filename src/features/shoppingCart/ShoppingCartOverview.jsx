@@ -42,15 +42,17 @@ function ShoppingCartOverview() {
                 <tbody className="shopping-cart__table-body">
                   {cart.map((product, index) => (
                     <tr className="shopping-cart__row" key={index}>
-                      <td className="shopping-cart__cell">
+                      <td className="shopping-cart__body-cell">
                         {product.name.toLowerCase()}
                       </td>
-                      <td className="shopping-cart__cell">{product.amount}</td>
-                      <td className="shopping-cart__cell">
+                      <td className="shopping-cart__body-cell">
+                        {product.amount}
+                      </td>
+                      <td className="shopping-cart__body-cell">
                         {formatCurrency(product.price)}
                       </td>
                       <td
-                        className="shopping-cart__cell shopping-cart__trash"
+                        className="shopping-cart__body-cell shopping-cart__trash"
                         onClick={() => {
                           handleTrashClick(product.id);
                         }}

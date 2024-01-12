@@ -364,10 +364,9 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 70%;
   max-height: 90%;
-  overflow: scroll;
   width: 50%;
+  height: fit-content;
   padding: var(--spacing-md);
   background-color: var(--color-primary-900);
   color: var(--color-white-500);
@@ -448,8 +447,7 @@ body {
   color: var(--color-secondary-150);
 }
 .shopping-cart__buttons {
-  margin-top: var(--spacing-default);
-  margin-left: auto;
+  margin: var(--spacing-default) 0 0 auto;
   display: flex;
   gap: var(--spacing-sm);
 }
@@ -841,7 +839,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1420px) {
+@media only screen and (max-width: 1440px) {
   .hero__headlines--main {
     font-size: var(--font-size-xxl);
   }
@@ -1058,6 +1056,67 @@ body {
 @media only screen and (max-width: 645px) {
   .shopping-cart {
     display: none;
+  }
+}
+@media only screen and (max-width: 1770px) {
+  .shopping-cart__overview {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .shopping-cart__overview {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .shopping-cart__overview {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 645px) {
+  .shopping-cart__empty-message {
+    width: var(--spacing-extra);
+  }
+}
+@media only screen and (max-width: 965px) {
+  .shopping-cart__table-header {
+    font-size: calc(var(--font-size-tiny) * 0.8);
+  }
+}
+@media only screen and (max-width: 965px) {
+  .shopping-cart__table-body {
+    font-size: var(--font-size-tiny);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .shopping-cart__header-cell:last-child {
+    padding-left: var(--spacing-sm);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .shopping-cart__body-cell {
+    padding: var(--spacing-tiny) 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .shopping-cart__body-cell:first-child {
+    padding-right: var(--spacing-sm);
+  }
+}
+@media only screen and (max-width: 645px) {
+  .shopping-cart__divider {
+    margin-top: var(--spacing-tiny) 0;
+  }
+}
+@media only screen and (max-width: 645px) {
+  .shopping-cart__total-price {
+    font-size: var(--font-size-sm);
+  }
+}
+@media only screen and (max-width: 645px) {
+  .shopping-cart__buttons {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-tiny);
   }
 }
 
