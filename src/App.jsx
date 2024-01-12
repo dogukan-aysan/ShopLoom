@@ -84,11 +84,13 @@ function App() {
                 duration: 5000,
               },
               style: {
-                fontSize: "16px",
-                maxWidth: "500px",
-                padding: "16px 24px",
-                backgroundColor: "var(--color-secondary-dark)",
-                color: "var(--color-grey-light-1)",
+                fontSize: "var(--font-size-tiny)",
+                fontFamily: "var(--font-family)",
+                fontWeight: "700",
+                maxWidth: "var(--spacing-huge)",
+                padding: "1.6rem 2.4rem",
+                backgroundColor: "var(--color-primary-50)",
+                color: "var(--color-primary-900)",
               },
             }}
           />
