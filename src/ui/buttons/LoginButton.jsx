@@ -1,9 +1,5 @@
-function LoginButton({ onClick }) {
-  return (
-    <button onClick={onClick} className="button button--login">
-      Login
-    </button>
-  );
+function LoginButton() {
+  return <button className="button button--login">Login</button>;
 }
 
 export default LoginButton;
