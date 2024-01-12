@@ -74,31 +74,23 @@
 ///////////////////////////////
 // HERO
 .hero {
-  &__headlines {
-    &--main {
-      @media only screen and (max-width: 1440px) {
-        font-size: var(--font-size-xxl);
-      }
-      @media only screen and (max-width: 1140px) {
-        font-size: var(--font-size-lg);
-      }
-      @media only screen and (max-width: 965px) {
-        font-size: calc(var(--font-size-md) * 1.05);
-      }
-      @media only screen and (max-width: 645px) {
-        font-size: calc(var(--font-size-default) * 1.5);
-      }
+  &__main {
+    @media only screen and (max-width: 645px) {
+      font-size: var(--font-size-md);
+      width: calc(var(--spacing-xxl) * 1.25);
     }
-    &--secondary {
-      @media only screen and (max-width: 1140px) {
-        font-size: calc(var(--font-size-default) * 0.8);
-      }
-      @media only screen and (max-width: 645px) {
-        font-size: var(--font-size-tiny);
-      }
-      @media only screen and (max-width: 500px) {
-        display: none;
-      }
+  }
+  &__brand {
+    @media only screen and (max-width: 645px) {
+      font-size: calc(var(--font-size-xxl) * 1.5);
+    }
+  }
+  &__secondary {
+    @media only screen and (max-width: 645px) {
+      font-size: var(--font-size-tiny);
+    }
+    @media only screen and (max-width: 500px) {
+      display: none;
     }
   }
   &__get-started {

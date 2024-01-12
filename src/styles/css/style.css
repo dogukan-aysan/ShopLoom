@@ -111,17 +111,23 @@ body {
 .hero__headlines {
   text-align: center;
 }
-.hero__headlines--main {
-  color: var(--color-primary-50);
-  font-size: calc(var(--font-size-xxl) * 1.3);
+.hero__main {
+  font-size: var(--font-size-lg);
+  color: var(--color-white-500);
   letter-spacing: 0.5rem;
   font-weight: 400;
   line-height: 1.3;
 }
-.hero__headlines--secondary {
+.hero__brand {
+  font-size: calc(var(--font-size-xxl) * 2);
+  font-family: "MonteCarlo", cursive;
+  color: var(--color-primary-300);
+  line-height: 1;
+}
+.hero__secondary {
+  font-size: var(--font-size-default);
   color: var(--color-secondary-50);
   font-weight: 400;
-  font-size: var(--font-size-default);
 }
 .hero__get-started {
   font-size: calc(var(--font-size-md) * 0.8);
@@ -752,11 +758,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-tiny);
   padding: var(--spacing-md);
 }
-.hero__headlines--main {
-  width: 50%;
+.hero__main {
+  width: calc(var(--spacing-huge) * 1.3);
+}
+.hero__brand {
+  margin: 0 0 var(--spacing-default) 0;
 }
 .hero__get-started {
   padding: var(--spacing-tiny) var(--spacing-sm);
@@ -839,38 +848,24 @@ body {
   }
 }
 
-@media only screen and (max-width: 1440px) {
-  .hero__headlines--main {
-    font-size: var(--font-size-xxl);
-  }
-}
-@media only screen and (max-width: 1140px) {
-  .hero__headlines--main {
-    font-size: var(--font-size-lg);
-  }
-}
-@media only screen and (max-width: 965px) {
-  .hero__headlines--main {
-    font-size: calc(var(--font-size-md) * 1.05);
+@media only screen and (max-width: 645px) {
+  .hero__main {
+    font-size: var(--font-size-md);
+    width: calc(var(--spacing-xxl) * 1.25);
   }
 }
 @media only screen and (max-width: 645px) {
-  .hero__headlines--main {
-    font-size: calc(var(--font-size-default) * 1.5);
-  }
-}
-@media only screen and (max-width: 1140px) {
-  .hero__headlines--secondary {
-    font-size: calc(var(--font-size-default) * 0.8);
+  .hero__brand {
+    font-size: calc(var(--font-size-xxl) * 1.5);
   }
 }
 @media only screen and (max-width: 645px) {
-  .hero__headlines--secondary {
+  .hero__secondary {
     font-size: var(--font-size-tiny);
   }
 }
 @media only screen and (max-width: 500px) {
-  .hero__headlines--secondary {
+  .hero__secondary {
     display: none;
   }
 }

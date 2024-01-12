@@ -18,19 +18,9 @@
 .hero {
   &__headlines {
     margin-bottom: var(--spacing-lg);
-    // background-image: linear-gradient(
-    //   to right,
-    //   rgba(35, 35, 35, 0.507),
-    //   rgba(59, 58, 58, 0.5)
-    // );
   }
   &__get-started {
     transition: all 0.3s ease;
-    // background-image: linear-gradient(
-    //   to right,
-    //   var(--color-secondary-200),
-    //   var(--color-secondary-300)
-    // );
     background-color: var(--color-white-500);
     border-radius: var(--border-radius-lg);
     &:hover {
