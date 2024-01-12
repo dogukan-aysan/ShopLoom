@@ -809,10 +809,10 @@ body {
   }
 }
 
-.hidden-links--about, .hidden-links--contact {
+.hidden-links--about, .hidden-links--contact, .hidden-links--cart {
   color: var(--color-primary-100);
 }
-.hidden-links--about:hover, .hidden-links--contact:hover {
+.hidden-links--about:hover, .hidden-links--contact:hover, .hidden-links--cart:hover {
   cursor: pointer;
   opacity: 0.7;
 }
@@ -1043,6 +1043,12 @@ body {
 @media only screen and (max-width: 1100px) {
   .search-box__input {
     font-size: var(--font-size-tiny);
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .shopping-cart {
+    display: none;
   }
 }
 
