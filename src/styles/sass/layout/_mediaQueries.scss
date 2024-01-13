@@ -1,4 +1,21 @@
 ///////////////////////////////
+// APP LAYOUT
+.app-layout {
+  @media only screen and (max-width: 645px) {
+    grid-template-columns: 1fr;
+    &__aside {
+      display: none;
+    }
+  }
+}
+//////////////////////////////////////////
+// MAIN CONTAINER OF CHILDREN
+.main {
+  @media only screen and (max-width: 330px) {
+    padding: 0;
+  }
+}
+///////////////////////////////
 // HEADER
 .header {
   &__company-overview {
@@ -48,8 +65,7 @@
 }
 .hidden-links {
   &--about,
-  &--contact,
-  &--cart {
+  &--contact {
     color: var(--color-primary-100);
     &:hover {
       cursor: pointer;
@@ -75,9 +91,16 @@
 // HERO
 .hero {
   &__main {
-    @media only screen and (max-width: 645px) {
+    @media only screen and (max-width: 660px) {
       font-size: var(--font-size-md);
-      width: calc(var(--spacing-xxl) * 1.25);
+      width: 75%;
+    }
+    @media only screen and (max-width: 580px) {
+      font-size: calc(var(--font-size-default) * 1.3);
+    }
+    @media only screen and (max-width: 480px) {
+      font-size: calc(var(--font-size-default) * 1.2);
+      width: 90%;
     }
   }
   &__brand {
@@ -206,16 +229,6 @@
   }
 }
 ///////////////////////////////
-// APP LAYOUT
-.app-layout {
-  @media only screen and (max-width: 645px) {
-    grid-template-columns: 1fr;
-    &__aside {
-      display: none;
-    }
-  }
-}
-///////////////////////////////
 // CATALOGUE
 .catalogue {
   @media only screen and (max-width: 1770px) {
@@ -268,7 +281,7 @@
 // SHOPPING-CART
 .shopping-cart {
   @media only screen and (max-width: 645px) {
-    display: none;
+    margin-right: auto;
   }
   &__overview {
     @media only screen and (max-width: 1770px) {
@@ -280,10 +293,32 @@
     @media only screen and (max-width: 800px) {
       width: 95%;
     }
+    @media only screen and (max-width: 645px) {
+      padding: var(--spacing-default);
+    }
+    @media only screen and (max-width: 430px) {
+      padding: var(--spacing-sm);
+      height: 50%;
+      overflow: scroll;
+    }
   }
   &__empty-message {
     @media only screen and (max-width: 645px) {
       width: var(--spacing-extra);
+    }
+  }
+  &__heading {
+    @media only screen and (max-width: 645px) {
+      font-size: calc(var(--font-size-default) * 1.5);
+    }
+    @media only screen and (max-width: 430px) {
+      margin-top: var(--spacing-default);
+      font-size: var(--font-size-default);
+    }
+  }
+  &__table {
+    @media only screen and (max-width: 645px) {
+      margin-top: var(--spacing-tiny);
     }
   }
   &__table-header {
@@ -291,31 +326,23 @@
       font-size: calc(var(--font-size-tiny) * 0.8);
     }
   }
-  &__table-body {
+  &__body-cell {
     @media only screen and (max-width: 965px) {
       font-size: var(--font-size-tiny);
     }
-  }
-  &__header-cell {
-    &:last-child {
-      @media only screen and (max-width: 800px) {
-        padding-left: var(--spacing-sm);
-      }
-    }
-  }
-  &__body-cell {
-    @media only screen and (max-width: 800px) {
-      padding: var(--spacing-tiny) 0;
+    @media only screen and (max-width: 647px) {
+      font-size: calc(var(--font-size-tiny) * 0.8);
+      padding: calc(var(--font-size-tiny) * 0.3) 0;
     }
     &:first-child {
       @media only screen and (max-width: 800px) {
         padding-right: var(--spacing-sm);
       }
     }
-  }
-  &__divider {
-    @media only screen and (max-width: 645px) {
-      margin-top: var(--spacing-tiny) 0;
+    &:nth-child(-n + 3) {
+      @media only screen and (max-width: 700px) {
+        padding-right: var(--font-size-sm);
+      }
     }
   }
   &__total-price {
@@ -323,10 +350,15 @@
       font-size: var(--font-size-sm);
     }
   }
-  &__buttons {
+}
+
+.button {
+  &--clear,
+  &--order {
     @media only screen and (max-width: 645px) {
-      margin-top: var(--spacing-sm);
+      margin-top: 0;
       font-size: var(--font-size-tiny);
+      padding: var(--spacing-tiny);
     }
   }
 }

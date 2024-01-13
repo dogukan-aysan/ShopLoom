@@ -52,12 +52,14 @@ function ShoppingCartOverview() {
                         {formatCurrency(product.price)}
                       </td>
                       <td
-                        className="shopping-cart__body-cell shopping-cart__trash"
+                        className="shopping-cart__body-cell"
                         onClick={() => {
                           handleTrashClick(product.id);
                         }}
                       >
-                        <IoTrashOutline />
+                        <span className="shopping-cart__trash">
+                          <IoTrashOutline />
+                        </span>
                       </td>
                     </tr>
                   ))}

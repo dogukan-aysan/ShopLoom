@@ -13,7 +13,13 @@ html {
 body {
   box-sizing: border-box;
   height: 100vh;
+  width: 100vw;
   background-color: var(--color-grey-light-2);
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 .hidden {

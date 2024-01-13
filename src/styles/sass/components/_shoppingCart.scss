@@ -33,7 +33,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    max-height: 90%;
+    min-height: 50%;
     width: 50%;
     height: fit-content;
     padding: var(--spacing-md);
@@ -84,6 +84,9 @@
   }
   &__header-cell {
     padding: var(--spacing-tiny) 0;
+    &:last-child {
+      padding-left: var(--spacing-sm);
+    }
   }
   &__table-body {
     font-size: var(--font-size-sm);
@@ -92,8 +95,7 @@
   &__trash {
     cursor: pointer;
     text-align: center;
-    height: 3rem;
-    width: 3rem;
+    padding: calc(var(--font-size-tiny) * 0.2);
     border-radius: var(--border-radius-huge);
     &:hover {
       background-color: var(--color-secondary-400);

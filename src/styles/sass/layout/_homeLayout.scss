@@ -1,6 +1,7 @@
 .home {
-  height: 100vh;
+  height: 100%;
   display: grid;
+  grid-template-columns: 100%;
   grid-template-rows: 7% 88% 5%;
   &__hero {
     display: flex;
@@ -21,7 +22,7 @@
     padding: var(--spacing-md);
   }
   &__main {
-    width: calc(var(--spacing-huge) * 1.3);
+    width: 80%;
   }
   &__brand {
     margin: 0 0 var(--spacing-default) 0;
