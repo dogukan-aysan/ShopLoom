@@ -31,7 +31,6 @@
       @media only screen and (max-width: 645px) {
         padding: 0;
         background-color: var(--color-primary-800) !important;
-        color: var(--color-primary-100) !important;
       }
     }
   }
@@ -43,7 +42,7 @@
   &__hidden-links {
     list-style-type: none;
     position: absolute;
-    top: calc(var(--spacing-default) * 1.8);
+    top: calc(var(--spacing-default) * 1.5);
     background-color: var(--color-primary-800);
     width: 100%;
     padding: var(--spacing-tiny) 0 var(--spacing-tiny) var(--spacing-sm);
@@ -173,11 +172,17 @@
       padding: calc(var(--spacing-sm) * 1.5);
       height: calc(var(--spacing-huge) * 1.5);
       gap: var(--spacing-sm);
-      margin-bottom: var(--spacing-md);
+      margin: var(--spacing-md) 0;
     }
     @media only screen and (max-width: 480px) {
       height: calc(var(--spacing-huge) * 1.33);
+      padding: var(--spacing-default) calc(var(--spacing-sm) * 1.5);
       width: var(--spacing-xxl);
+    }
+  }
+  &__heading {
+    @media only screen and (max-width: 645px) {
+      font-size: var(--font-size-tiny);
     }
   }
   &__inputs {
@@ -222,6 +227,10 @@
   @media only screen and (max-width: 645px) {
     padding: calc(var(--spacing-tiny) * 0.6);
   }
+  @media only screen and (max-width: 480px) {
+    padding: calc(var(--spacing-tiny) * 0.1);
+    font-size: var(--font-size-sm);
+  }
 }
 ///////////////////////////////
 // CATALOGUE
@@ -229,11 +238,20 @@
   @media only screen and (max-width: 1770px) {
     width: 109rem;
   }
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: 1200px) {
     width: 75rem;
   }
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 880px) {
+    width: 65rem;
+  }
+  @media only screen and (max-width: 740px) {
+    width: 55rem;
+  }
+  @media only screen and (max-width: 600px) {
     width: 35rem;
+  }
+  @media only screen and (max-width: 400px) {
+    width: 25rem;
   }
   &__header {
     @media only screen and (max-width: 1100px) {
@@ -250,12 +268,21 @@
     @media only screen and (max-width: 1770px) {
       grid-template-columns: repeat(3, 35rem);
     }
-    @media only screen and (max-width: 1440px) {
+    @media only screen and (max-width: 1200px) {
       grid-template-columns: repeat(2, 35rem);
       column-gap: var(--spacing-md);
     }
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 880px) {
+      grid-template-columns: repeat(2, 30rem);
+    }
+    @media only screen and (max-width: 740px) {
+      grid-template-columns: repeat(2, 25rem);
+    }
+    @media only screen and (max-width: 600px) {
       grid-template-columns: 35rem;
+    }
+    @media only screen and (max-width: 400px) {
+      grid-template-columns: 25rem;
       column-gap: var(--spacing-md);
     }
   }
@@ -293,7 +320,7 @@
     }
     @media only screen and (max-width: 430px) {
       padding: var(--spacing-sm);
-      height: 50%;
+      height: 65%;
       overflow: scroll;
     }
   }

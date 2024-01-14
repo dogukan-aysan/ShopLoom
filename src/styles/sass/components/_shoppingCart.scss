@@ -12,12 +12,12 @@
   &__notification {
     position: absolute;
     top: var(--spacing-tiny);
-    left: -0.7rem;
+    left: 0.6rem;
     font-size: var(--font-size-tiny);
     font-weight: 400;
     background-color: var(--color-primary-400);
-    height: calc(var(--spacing-sm) * 0.95);
-    width: calc(var(--spacing-sm) * 0.95);
+    height: calc(var(--spacing-sm) * 1.1);
+    width: calc(var(--spacing-sm) * 1.1);
     border-radius: var(--border-radius-lg);
     display: flex;
     justify-content: center;
