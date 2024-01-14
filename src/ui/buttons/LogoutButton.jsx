@@ -1,4 +1,5 @@
 import useLogout from "../../features/auth/useLogout";
+import { TbLogout } from "react-icons/tb";
 import Loader from "../Loader";
 
 function LogoutButton() {
@@ -11,7 +12,7 @@ function LogoutButton() {
         </div>
       ) : (
         <button onClick={logout} className="button button--logout">
-          Logout
+          <TbLogout />
         </button>
       )}
     </>

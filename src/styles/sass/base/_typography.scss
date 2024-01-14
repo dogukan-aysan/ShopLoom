@@ -12,13 +12,34 @@ body {
   font-size: var(--font-size-sm);
   font-weight: 400;
 }
-
+////////////////////////////////////////////////
+// HEADER
 .header {
-  color: var(--color-grey-light-1);
-  font-weight: 700;
   font-size: var(--font-size-sm);
 }
-
+.about-link,
+.contact-link {
+  color: var(--color-white-500);
+  font-weight: 400;
+}
+////////////////////////////////////////////////
+//  LOGO
+.logo {
+  &__brand {
+    font-family: "MonteCarlo", cursive;
+    color: var(--color-primary-50);
+    font-size: calc(var(--font-size-md) * 1.2);
+    font-weight: 400;
+  }
+}
+////////////////////////////////////////////////
+//  SHOPPING-CART
+.shopping-cart {
+  &__icon {
+    color: var(--color-white-600);
+    font-weight: 400;
+  }
+}
 ////////////////////////////////////////////////
 // HERO
 .hero {
@@ -36,6 +57,7 @@ body {
     font-size: calc(var(--font-size-xxl) * 2);
     font-family: "MonteCarlo", cursive;
     color: var(--color-primary-300);
+    filter: brightness(2);
     line-height: 1;
   }
   &__secondary {
@@ -113,8 +135,8 @@ body {
   font-weight: 400;
   color: inherit;
   &--logout {
-    color: var(--color-primary-500);
-    font-size: var(--font-size-sm);
+    color: var(--color-white-600);
+    font-size: var(--font-size-md);
   }
   &--add-cart {
     font-size: var(--font-size-tiny);

@@ -5,25 +5,23 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-primary-900);
-  &__company-overview {
+  &__right-side {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    &--about,
-    &--contact {
-      color: var(--color-primary-100);
-      &:hover {
-        cursor: pointer;
-        opacity: 0.7;
-      }
-    }
+    gap: var(--spacing-tiny);
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-tiny);
   }
   &__auth {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: var(--spacing-tiny);
+    border-left: 1px solid var(--color-secondary-300);
+    padding-left: var(--spacing-tiny);
     &--login,
     &--register {
       text-decoration: none;
@@ -33,23 +31,23 @@
       }
     }
     &--login {
-      color: var(--color-primary-100);
+      color: var(--color-white-500);
     }
     &--register {
-      color: var(--color-white);
-      background-color: var(--color-primary-700);
+      color: var(--color-white-500);
       border-radius: var(--border-radius-lg);
-      padding: calc(var(--spacing-tiny) * 0.5) var(--spacing-sm);
+      padding: 0 var(--spacing-tiny);
+      background-color: var(--color-primary-700);
     }
   }
   &__hamburger {
     display: none;
     height: var(--spacing-md);
     width: var(--spacing-default);
-    fill: var(--color-primary-950);
+    color: var(--color-white-600);
+    cursor: pointer;
     &:hover {
-      cursor: pointer;
-      fill: var(--color-primary-50);
+      opacity: 0.7;
     }
   }
 }

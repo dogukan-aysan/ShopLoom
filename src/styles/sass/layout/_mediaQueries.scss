@@ -18,12 +18,9 @@
 ///////////////////////////////
 // HEADER
 .header {
-  &__company-overview {
-    &--about,
-    &--contact {
-      @media only screen and (max-width: 645px) {
-        display: none;
-      }
+  &__links {
+    @media only screen and (max-width: 645px) {
+      display: none;
     }
   }
   &__auth {
@@ -64,15 +61,13 @@
   }
 }
 .hidden-links {
-  &--about,
-  &--contact {
-    color: var(--color-primary-100);
+  &__about,
+  &__contact {
     &:hover {
-      cursor: pointer;
       opacity: 0.7;
     }
   }
-  &--auth {
+  &__auth {
     display: flex;
     flex-direction: column;
     width: var(--spacing-lg);
@@ -83,7 +78,7 @@
   @media only screen and (max-width: 645px) {
     padding: 0;
     background-color: var(--color-primary-800) !important;
-    color: var(--color-primary-100) !important;
+    color: var(--color-white-500) !important;
     text-align: left;
   }
 }
@@ -281,7 +276,7 @@
 // SHOPPING-CART
 .shopping-cart {
   @media only screen and (max-width: 645px) {
-    margin-right: auto;
+    bottom: calc(var(--spacing-tiny) * 0.58);
   }
   &__overview {
     @media only screen and (max-width: 1770px) {

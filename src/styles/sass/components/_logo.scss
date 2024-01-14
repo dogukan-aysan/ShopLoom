@@ -1,8 +1,15 @@
 .logo {
-  fill: var(--color-primary-500);
-  height: 6rem;
-  width: 6rem;
-  &:hover {
-    cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &__icon {
+    fill: var(--color-primary-500);
+    height: 6rem;
+    width: 6rem;
+  }
+  &__brand {
+    position: relative;
+    right: calc(var(--spacing-tiny) * 0.45);
+    // top: calc(var(--spacing-tiny) * 0.4);
   }
 }

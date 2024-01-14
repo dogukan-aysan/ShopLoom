@@ -6,7 +6,8 @@ import Logo from "./Logo";
 import ShoppingCartIcon from "../features/shoppingCart/ShoppingCartIcon";
 import useUser from "../features/auth/useUser";
 import { useLocation } from "react-router-dom";
-import toast from "react-hot-toast";
+import AboutLink from "./AboutLink";
+import ContactLink from "./ContactLink";
 
 function Header() {
   const { isAuthenticated } = useUser();
@@ -16,30 +17,22 @@ function Header() {
   return (
     <>
       <header className="header">
-        <div className="header__company-overview">
-          <Logo />
-          <span
-            className="header__company-overview--about"
-            onClick={() => toast.error("Not yet implemented")}
-          >
-            About
-          </span>
-          <span
-            className="header__company-overview--contact"
-            onClick={() => toast.error("Not yet implemented")}
-          >
-            Contact
+        <Logo />
+        <div className="header__right-side">
+          <div className="header__links">
+            <AboutLink />
+            <ContactLink />
+          </div>
+          {isAuthenticated && location.pathname !== "/app/shopping-cart" && (
+            <ShoppingCartIcon />
+          )}
+          <div className="header__auth">
+            <HeaderAuth />
+          </div>
+          <span className="header__hamburger">
+            <Hamburger toggled={isOpen} toggle={setIsOpen} />
           </span>
         </div>
-        {isAuthenticated && location.pathname !== "/app/shopping-cart" && (
-          <ShoppingCartIcon />
-        )}
-        <div className="header__auth">
-          <HeaderAuth />
-        </div>
-        <span className="header__hamburger">
-          <Hamburger toggled={isOpen} toggle={setIsOpen} />
-        </span>
       </header>
       {isOpen && <HiddenLinks />}
     </>

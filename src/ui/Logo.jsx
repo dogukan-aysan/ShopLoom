@@ -13,9 +13,9 @@ function Logo() {
     navigate("/");
   };
   return (
-    <svg className="logo" onClick={handleClick}>
-      <use xlinkHref="/img/sprite.svg#icon-opencart"></use>
-    </svg>
+    <div className="logo" onClick={handleClick}>
+      <span className="logo__brand">ShopLoom</span>
+    </div>
   );
 }
 
