@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import toast from "react-hot-toast";
 
 const initialState = {
   cart: [],
@@ -47,6 +48,7 @@ const CartProvider = ({ children }) => {
       }
     }
     if (!isExisted) cart.push(product);
+    toast.success("Successfully added.");
     dispatch({ type: "cart/update", payload: cart });
   };
   const deleteProductFromCart = (id) => {
