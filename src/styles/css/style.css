@@ -432,20 +432,6 @@ body {
   font-size: var(--font-size-default);
   text-align: center;
 }
-.shopping-cart__back-button {
-  display: inline-flex;
-  gap: var(--spacing-tiny);
-  padding: var(--spacing-tiny) var(--spacing-tiny);
-  border-radius: var(--border-radius-sm);
-  font-size: var(--font-size-sm);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.shopping-cart__back-button:hover {
-  cursor: pointer;
-  background: #8a0007;
-}
 .shopping-cart__heading {
   font: inherit;
   font-size: var(--font-size-md);
@@ -508,17 +494,17 @@ body {
   padding: var(--spacing-tiny) var(--spacing-sm);
   border: none;
 }
-.button--login, .button--register, .button--logout, .button--clear, .button--order, .button--add-cart {
+.button--login, .button--register, .button--logout, .button--clear-cart, .button--order, .button--add-cart {
   cursor: pointer;
 }
-.button--login:hover, .button--register:hover, .button--logout:hover, .button--clear:hover, .button--order:hover, .button--add-cart:hover {
+.button--login:hover, .button--register:hover, .button--logout:hover, .button--clear-cart:hover, .button--order:hover, .button--add-cart:hover {
   opacity: 0.7;
 }
-.button--login, .button--register, .button--loader, .button--clear, .button--order {
+.button--login, .button--register, .button--loader, .button--clear-cart, .button--order {
   border-radius: var(--border-radius-lg);
   margin-top: var(--spacing-tiny);
 }
-.button--login, .button--register, .button--clear {
+.button--login, .button--register, .button--clear-cart {
   background-color: var(--color-primary-800);
 }
 .button--order {
@@ -540,6 +526,20 @@ body {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-tiny);
+}
+.button--back {
+  display: inline-flex;
+  gap: var(--spacing-tiny);
+  padding: var(--spacing-tiny) var(--spacing-tiny);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.button--back:hover {
+  cursor: pointer;
+  background: #8a0007;
 }
 
 .footer {
@@ -1239,7 +1239,7 @@ body {
 }
 
 @media only screen and (max-width: 645px) {
-  .button--clear, .button--order {
+  .button--clear-cart, .button--order {
     margin-top: 0;
     font-size: var(--font-size-tiny);
     padding: var(--spacing-tiny);

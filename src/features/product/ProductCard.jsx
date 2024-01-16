@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import Loader from "../../ui/Loader";
-import AddCartButton from "../../ui/buttons/AddCartButton";
 import { formatCurrency, parseJsonImages } from "../../utils/helpers";
 import ProductCardCarousel from "./ProductCardCarousel";
 import { CartContext } from "../../contexts/CartContext";
+import Button from "../../ui/buttons/Button";
 
 function ProductCard({ product }) {
   const { addProductToCart } = useContext(CartContext);
@@ -27,7 +27,7 @@ function ProductCard({ product }) {
       <ProductCardCarousel images={filteredImages} id={id} />
       <div className="product-card__footer">
         <span className="footer__price">{formatCurrency(filteredPrice)}</span>
-        <AddCartButton onAdd={handleProductAdd} />
+        <Button handleClickFunc={handleProductAdd}>Add Cart</Button>
       </div>
     </div>
   );

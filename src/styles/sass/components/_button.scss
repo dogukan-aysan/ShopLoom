@@ -4,7 +4,7 @@
   &--login,
   &--register,
   &--logout,
-  &--clear,
+  &--clear-cart,
   &--order,
   &--add-cart {
     cursor: pointer;
@@ -15,14 +15,14 @@
   &--login,
   &--register,
   &--loader,
-  &--clear,
+  &--clear-cart,
   &--order {
     border-radius: var(--border-radius-lg);
     margin-top: var(--spacing-tiny);
   }
   &--login,
   &--register,
-  &--clear {
+  &--clear-cart {
     background-color: var(--color-primary-800);
   }
   &--order {
@@ -44,5 +44,19 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-tiny);
+  }
+  &--back {
+    display: inline-flex;
+    gap: var(--spacing-tiny);
+    padding: var(--spacing-tiny) var(--spacing-tiny);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:hover {
+      cursor: pointer;
+      background: darken(#f0000c, 20%);
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import LoginButton from "../../ui/buttons/LoginButton";
 import useLogin from "./useLogin";
 import LoaderButton from "../../ui/buttons/LoaderButton";
+import Button from "../../ui/buttons/Button";
 
 function LoginForm() {
   const { register, formState, handleSubmit, reset } = useForm();
@@ -70,7 +70,7 @@ function LoginForm() {
           Remember Me
         </label>
       </div>
-      {isPending ? <LoaderButton /> : <LoginButton />}
+      {isPending ? <LoaderButton /> : <Button>Login</Button>}
     </form>
   );
 }

@@ -51,20 +51,6 @@
     font-size: var(--font-size-default);
     text-align: center;
   }
-  &__back-button {
-    display: inline-flex;
-    gap: var(--spacing-tiny);
-    padding: var(--spacing-tiny) var(--spacing-tiny);
-    border-radius: var(--border-radius-sm);
-    font-size: var(--font-size-sm);
-    position: absolute;
-    top: 0;
-    left: 0;
-    &:hover {
-      cursor: pointer;
-      background: darken(#f0000c, 20%);
-    }
-  }
   &__heading {
     font: inherit;
     font-size: var(--font-size-md);

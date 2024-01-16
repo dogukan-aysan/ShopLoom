@@ -5,7 +5,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { formatCurrency } from "../../utils/helpers";
 
 import BackButton from "../../ui/buttons/BackButton";
-import ClearCartButton from "../../ui/buttons/ClearCartButton";
+import Button from "../../ui/buttons/Button";
 import OrderButton from "../../ui/buttons/OrderButton";
 
 function ShoppingCartOverview() {
@@ -13,6 +13,7 @@ function ShoppingCartOverview() {
     cart,
     price: totalPrice,
     deleteProductFromCart,
+    dispatch,
   } = useContext(CartContext);
 
   const handleTrashClick = (id) => {
@@ -73,7 +74,11 @@ function ShoppingCartOverview() {
                 </span>
               </div>
               <div className="shopping-cart__buttons">
-                <ClearCartButton />
+                <Button
+                  handleClickFunc={() => dispatch({ type: "cart/clear" })}
+                >
+                  Clear Cart
+                </Button>
                 <OrderButton />
               </div>
             </>

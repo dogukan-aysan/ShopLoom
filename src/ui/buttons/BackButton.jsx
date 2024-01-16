@@ -7,10 +7,8 @@ function BackButton() {
     navigate(-1);
   };
   return (
-    <div className="shopping-cart__back-button" onClick={handleBackClick}>
-      <span>
-        <ImArrowLeft2 />
-      </span>
+    <div className="button button--back" onClick={handleBackClick}>
+      <ImArrowLeft2 />
     </div>
   );
 }

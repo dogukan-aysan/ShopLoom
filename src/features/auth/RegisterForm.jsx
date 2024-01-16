@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useRegister } from "./useRegister";
 import LoaderButton from "../../ui/buttons/LoaderButton";
-import RegisterButton from "../../ui/buttons/RegisterButton";
+import Button from "../../ui/buttons/Button";
 
 function RegisterForm() {
   const { register, formState, getValues, handleSubmit, reset } = useForm();
@@ -158,7 +158,7 @@ function RegisterForm() {
             </div>
           </div>
         </div>
-        {isPending ? <LoaderButton /> : <RegisterButton />}
+        {isPending ? <LoaderButton /> : <Button>Register</Button>}
       </form>
     </>
   );
