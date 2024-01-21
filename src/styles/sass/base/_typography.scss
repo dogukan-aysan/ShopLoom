@@ -16,11 +16,14 @@ body {
 // HEADER
 .header {
   font-size: var(--font-size-sm);
-}
-.about-link,
-.contact-link {
-  color: var(--color-white-500);
-  font-weight: 400;
+  &__links {
+    &--about,
+    &--contact,
+    &--products {
+      color: var(--color-white-500);
+      font-weight: 400;
+    }
+  }
 }
 ////////////////////////////////////////////////
 //  LOGO

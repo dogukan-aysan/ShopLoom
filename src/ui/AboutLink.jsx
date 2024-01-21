@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 function AboutLink() {
   return (
     <span
-      className="about-link"
+      className="header__links--about"
       onClick={() => toast.error("Not yet implemented")}
     >
       About

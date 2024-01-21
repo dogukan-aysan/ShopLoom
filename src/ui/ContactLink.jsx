@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 function ContactLink() {
   return (
     <span
-      className="contact-link"
+      className="header__links--contact"
       onClick={() => toast.error("Not yet implemented")}
     >
       Contact

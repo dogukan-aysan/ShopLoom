@@ -8,6 +8,7 @@ import useUser from "../features/auth/useUser";
 import { useLocation } from "react-router-dom";
 import AboutLink from "./AboutLink";
 import ContactLink from "./ContactLink";
+import ProductsLink from "../features/product/ProductsLink";
 
 function Header() {
   const { isAuthenticated } = useUser();
@@ -22,6 +23,7 @@ function Header() {
           <div className="header__links">
             <AboutLink />
             <ContactLink />
+            <ProductsLink />
           </div>
           {isAuthenticated && location.pathname !== "/shopping-cart" && (
             <ShoppingCartIcon />

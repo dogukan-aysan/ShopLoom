@@ -1,3 +1,4 @@
+import ProductsLink from "../features/product/ProductsLink";
 import AboutLink from "./AboutLink";
 import ContactLink from "./ContactLink";
 import HeaderAuth from "./HeaderAuth";
@@ -10,6 +11,9 @@ function HiddenLinks() {
       </li>
       <li className="hidden-links__contact">
         <ContactLink />
+      </li>
+      <li className="hidden-links__products">
+        <ProductsLink />
       </li>
       <li>
         <div className="hidden-links__auth">

@@ -111,9 +111,7 @@ body {
 .header {
   font-size: var(--font-size-sm);
 }
-
-.about-link,
-.contact-link {
+.header__links--about, .header__links--contact, .header__links--products {
   color: var(--color-white-500);
   font-weight: 400;
 }
@@ -608,6 +606,12 @@ body {
   display: flex;
   align-items: center;
   gap: var(--spacing-tiny);
+}
+.header__links--about, .header__links--contact, .header__links--products {
+  cursor: pointer;
+}
+.header__links--about:hover, .header__links--contact:hover, .header__links--products:hover {
+  opacity: 0.7;
 }
 .header__auth {
   display: flex;
