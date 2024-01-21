@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useRegister } from "./useRegister";
 import LoaderButton from "../../ui/buttons/LoaderButton";
 import Button from "../../ui/buttons/Button";
+import BackButton from "../../ui/buttons/BackButton";
 
 function RegisterForm() {
   const { register, formState, getValues, handleSubmit, reset } = useForm();
@@ -19,6 +20,7 @@ function RegisterForm() {
   return (
     <>
       <form className="register__form" onSubmit={handleSubmit(onSubmit)}>
+        <BackButton />
         <h2 className="register__heading">Create Your Account</h2>
         <div className="register__inputs">
           {/* FIRST NAME */}

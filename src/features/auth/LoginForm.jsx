@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import useLogin from "./useLogin";
 import LoaderButton from "../../ui/buttons/LoaderButton";
 import Button from "../../ui/buttons/Button";
+import BackButton from "../../ui/buttons/BackButton";
 
 function LoginForm() {
   const { register, formState, handleSubmit, reset } = useForm();
@@ -13,6 +14,7 @@ function LoginForm() {
 
   return (
     <form className="login__form" onSubmit={handleSubmit(myHandleSubmit)}>
+      <BackButton />
       <h2 className="login__heading">Log Into Your Account</h2>
       <div className="login__input">
         <label htmlFor="email" className="form-label login__label">

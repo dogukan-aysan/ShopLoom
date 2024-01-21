@@ -1,7 +1,7 @@
 .login {
   &__form {
     background-color: var(--color-primary-900);
-    border-radius: 3rem;
+    border-radius: var(--border-radius-sm);
     box-shadow: var(--shadow-dark);
   }
   &__input {

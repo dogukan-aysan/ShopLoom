@@ -710,8 +710,8 @@ body {
 }
 
 .login__form {
-  margin: auto auto;
   position: relative;
+  margin: auto auto;
   max-width: 58rem;
   padding: var(--spacing-md);
   display: flex;
@@ -737,6 +737,7 @@ body {
 }
 
 .register__form {
+  position: relative;
   margin: auto auto;
   max-width: 120rem;
   height: calc(var(--spacing-huge) * 1.2);
@@ -1275,7 +1276,7 @@ body {
 
 .login__form {
   background-color: var(--color-primary-900);
-  border-radius: 3rem;
+  border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-dark);
 }
 .login__input--email, .login__input--password {
@@ -1289,7 +1290,7 @@ body {
 
 .register__form {
   background-color: var(--color-primary-900);
-  border-radius: 3rem;
+  border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-dark);
 }
 .register__text-field {
