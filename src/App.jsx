@@ -93,10 +93,10 @@ function App() {
             containerStyle={{ margin: "0.8rem" }}
             toastOptions={{
               success: {
-                duration: 3000,
+                duration: 1000,
               },
               error: {
-                duration: 5000,
+                duration: 1000,
               },
               style: {
                 fontSize: "var(--font-size-tiny)",
