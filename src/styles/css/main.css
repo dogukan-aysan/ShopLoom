@@ -416,6 +416,7 @@ body {
   flex-direction: column;
   min-height: 50%;
   width: 50%;
+  height: -moz-fit-content;
   height: fit-content;
   padding: var(--spacing-md);
   background-color: var(--color-primary-900);
@@ -581,7 +582,8 @@ body {
 
 .c-img {
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .carousel-control-prev-icon,
@@ -709,6 +711,7 @@ body {
 
 .login__form {
   margin: auto auto;
+  position: relative;
   max-width: 58rem;
   padding: var(--spacing-md);
   display: flex;
@@ -1117,7 +1120,8 @@ body {
 @media only screen and (max-width: 1200px) {
   .catalogue__grid {
     grid-template-columns: repeat(2, 35rem);
-    column-gap: var(--spacing-md);
+    -moz-column-gap: var(--spacing-md);
+         column-gap: var(--spacing-md);
   }
 }
 @media only screen and (max-width: 880px) {
@@ -1138,7 +1142,8 @@ body {
 @media only screen and (max-width: 400px) {
   .catalogue__grid {
     grid-template-columns: 25rem;
-    column-gap: var(--spacing-md);
+    -moz-column-gap: var(--spacing-md);
+         column-gap: var(--spacing-md);
   }
 }
 
@@ -1291,6 +1296,4 @@ body {
   background-color: var(--color-white-500);
   border: none;
   border-radius: var(--border-radius-tiny);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

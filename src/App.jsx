@@ -19,7 +19,7 @@ import Login from "./pages/Login";
 import { CartProvider } from "./contexts/CartContext";
 import { ProductProvider } from "./contexts/ProductContext";
 
-import "./styles/css/style.css";
+import "./styles/css/main.css";
 import ProtectedRoute from "./ui/ProtectedRoute";
 
 // sets up cache behind the scenes
