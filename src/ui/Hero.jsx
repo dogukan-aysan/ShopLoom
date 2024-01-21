@@ -8,7 +8,7 @@ function Hero() {
   const { isAuthenticated } = useUser();
   const navigate = useNavigate();
   const handleGetStartedClick = () => {
-    isAuthenticated ? navigate("/app/products") : navigate("/auth/login");
+    isAuthenticated ? navigate("/") : navigate("/auth/login");
   };
   return (
     <div className="home__hero">

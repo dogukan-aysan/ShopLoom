@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 
-import ProtectedRoute from "./ui/ProtectedRoute";
 import AppLayout from "./ui/AppLayout";
 import AuthLayout from "./ui/AuthLayout";
 
@@ -14,7 +13,6 @@ import Order from "./pages/Order";
 import OrderDetails from "./pages/OrderDetails";
 import CreateOrder from "./pages/CreateOrder";
 import PageNotFound from "./pages/PageNotFound";
-import Homepage from "./pages/Homepage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
@@ -22,6 +20,7 @@ import { CartProvider } from "./contexts/CartContext";
 import { ProductProvider } from "./contexts/ProductContext";
 
 import "./styles/css/style.css";
+import ProtectedRoute from "./ui/ProtectedRoute";
 
 // sets up cache behind the scenes
 const queryClient = new QueryClient({
@@ -40,9 +39,6 @@ function App() {
           <ReactQueryDevtools initialIsOpen={false} />
           <BrowserRouter>
             <Routes>
-              {/* HOME */}
-              <Route path="/" element={<Homepage />} />
-
               {/* AUTH */}
               <Route element={<AuthLayout />}>
                 <Route path="/auth/register" element={<Register />} />
@@ -50,23 +46,42 @@ function App() {
               </Route>
 
               {/*APP */}
+              <Route path="/" element={<AppLayout />}>
+                <Route path="/" element={<ProductCatalogue />} />
+                <Route path="/:productId" element={<ProductDetails />} />
+                <Route
+                  path="/shopping-cart"
+                  element={
+                    <ProtectedRoute>
+                      <ShoppingCart />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/orders"
+                  element={
+                    <ProtectedRoute>
+                      <Order />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/order/new"
+                  element={
+                    <ProtectedRoute>
+                      <CreateOrder />
+                    </ProtectedRoute>
+                  }
+                />
+              </Route>
               <Route
+                path="/order/:orderId"
                 element={
                   <ProtectedRoute>
-                    <AppLayout />
+                    <OrderDetails />
                   </ProtectedRoute>
                 }
-              >
-                <Route path="/app/products" element={<ProductCatalogue />} />
-                <Route
-                  path="/app/products/:productId"
-                  element={<ProductDetails />}
-                />
-                <Route path="/app/shopping-cart" element={<ShoppingCart />} />
-                <Route path="/app/orders" element={<Order />} />
-                <Route path="/app/order/:orderId" element={<OrderDetails />} />
-                <Route path="/app/order/new" element={<CreateOrder />} />
-              </Route>
+              />
 
               {/*PAGE NOT FOUND */}
               <Route path="*" element={<PageNotFound />} />

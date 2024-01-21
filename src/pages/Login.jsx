@@ -7,7 +7,7 @@ function Login() {
   const navigate = useNavigate();
   const { isAuthenticated } = useUser();
   useEffect(() => {
-    if (isAuthenticated) navigate("/app/products");
+    if (isAuthenticated) navigate("/");
   }, [isAuthenticated, navigate]);
   return (
     <div className="login-page">

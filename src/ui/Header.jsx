@@ -23,7 +23,7 @@ function Header() {
             <AboutLink />
             <ContactLink />
           </div>
-          {isAuthenticated && location.pathname !== "/app/shopping-cart" && (
+          {isAuthenticated && location.pathname !== "/shopping-cart" && (
             <ShoppingCartIcon />
           )}
           <div className="header__auth">

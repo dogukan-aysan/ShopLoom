@@ -7,7 +7,7 @@ function ShoppingCartIcon() {
   const navigate = useNavigate();
   const { productCount } = useContext(CartContext);
   const handleCartClick = () => {
-    navigate("/app/shopping-cart");
+    navigate("/shopping-cart");
   };
   return (
     <div className="shopping-cart">

@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 function OrderButton() {
   // const navigate = useNavigate();
   const onOrderClick = () => {
-    // navigate("/app/order/new");
+    // navigate("/order/new");
     toast.error("Not yet implemented");
   };
   return (

@@ -10,7 +10,7 @@ export function useRegister() {
     mutationFn: registerUser,
     onSuccess: () => {
       toast.success("Account succesfully created! Enjoy shopping...");
-      navigate("/app/products", { replace: true });
+      navigate("/", { replace: true });
     },
     onError: (err) => {
       console.log(err, "💥💥ERROR💥💥");

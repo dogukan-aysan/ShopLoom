@@ -10,7 +10,7 @@ function useLogin() {
     mutationFn: ({ email, password }) => login({ email, password }),
     onSuccess: (user) => {
       queryClient.setQueryData(["user"], user.user);
-      navigate("/app/products", { replace: true });
+      navigate("/", { replace: true });
     },
     onError: (err) => {
       console.log(err, "💥💥ERROR💥💥");
